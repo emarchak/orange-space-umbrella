@@ -1,5 +1,7 @@
-ARG VARIANT=18-bullseye
 FROM hexpm/elixir:1.12.2-erlang-22.2.2-ubuntu-focal-20200423
+
+ENV TZ=America/Toronto
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get update -qq && \
   apt-get install -qq -y \
