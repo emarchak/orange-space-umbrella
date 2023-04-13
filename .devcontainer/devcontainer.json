@@ -1,0 +1,9 @@
+{
+  "name": "phoenix-devcontainer",
+  "onCreateCommand": "elixir --version",
+  "build": {"dockerfile": "Dockerfile"},
+  "workspaceFolder": "/workspace/phoenix",
+  "forwardPorts": [
+    4000
+  ]
+}
